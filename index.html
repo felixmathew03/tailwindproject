@@ -11,12 +11,27 @@
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 800px;
-            height: 300px;
+            width: 100px;
+            height: 100px;
             background: radial-gradient(circle, rgba(71, 175, 168, 0.5) 0%, rgba(0, 128, 0, 0) 70%);
             border-radius: 50%;
             filter: blur(40px);
             pointer-events: none;
+        }
+        @media screen and (min-width:768px){
+            .radial-shadow{
+                width: 800px;
+                height: 500px;
+            }
+        }
+        @media screen and (min-width:1208px){
+            .radial-shadow{
+                width: 800px;
+                height: 500px;
+            }
+        }
+        .shadow-inner{
+            box-shadow: 0px -60px 50px  rgb(28, 27, 27) inset;
         }
     </style>
 </head>
@@ -24,26 +39,26 @@
     <div class="w-full bg-slate-950 border-b border-gray-500">
         <div class="w-9/10 mx-auto flex items-center py-4 justify-between"> 
             <img src="./images/bg1.png" alt="" class="w-1/5">
-            <button class="py-2 px-7 bg-linear-to-b from-slate-900 from-60% to-teal-950  border-2 border-teal-500 text-white w-max rounded-2xl text-xl">Let's Start</button>
+            <button class="py-1 md:py-2 lg:py-2 px-4 md:px-7 lg:px-7 bg-linear-to-b from-slate-900 from-60% to-teal-950  border-2 border-cyan-500 text-white w-max rounded-xl text-xs md:text-xl lg:text-xl ">Let's Start</button>
         </div>
     </div>
-    <div class="w-full h-screen bg-slate-950 flex flex-col justify-end items-center gap-24 font-sans relative">
-        <div class="w-full h-2/3">
-            <div class="w-2/3 h-full mx-auto flex flex-col items-center gap-8">
-                <h1 class="text-6xl font-light text-white">Build your <span class="font-normal">Digital Product</span></h1>
-                <div class="flex justify-between items-center gap-16 h-2/3">
+    <div class="w-full  bg-slate-950 flex flex-col justify-end items-center gap-24 font-sans relative">
+        <div class="w-full h-max">
+            <div class="w-9/10 md:w-9/10 lg:w-9/10 h-full mx-auto md:mt-80 lg:mt-64 md:mb-48 lg:mb-48 flex flex-col items-center gap-8">
+                <h1 class="text-2xl  md:text-5xl lg:text-7xl font-light text-white">Build your <span class="font-semibold">Digital Product</span></h1>
+                <div class="flex justify-between items-center  h-2/5">
                     <div class="h-full grid grid-cols-1 gap-5">
-                        <div class="w-12 h-12 border-2 border-gray-900 rounded-xl flex items-center justify-center">
+                        <div class="size-6 md:size-12 lg:size-12 border-2 border-gray-900 rounded-xl flex items-center justify-center">
                             <img src="./images/icons8-basketball-50.png" alt="" class="w-2/3 h-2/3 object-contain">
                         </div>
-                        <div class="w-12 h-12 border-2 border-gray-900 rounded-xl flex items-center justify-center">
+                        <div class="size-6 md:size-12 lg:size-12 border-2 border-gray-900 rounded-xl flex items-center justify-center">
                             <img src="./images/icons8-behance-32.png" alt="" class="w-2/3 h-2/3 object-contain">
                         </div>
-                        <div class="w-12 h-12 border-2 border-gray-900 rounded-xl flex items-center justify-center">
+                        <div class="size-6 md:size-12 lg:size-12 border-2 border-gray-900 rounded-xl flex items-center justify-center">
                             <img src="./images/icons8-pinterest-50.png" alt="" class="w-2/3 h-2/3 object-contain">
                         </div>
                     </div>
-                    <div class="h-full flex items-center text-gray-400 text-3xl leading-12 text-center">
+                    <div class="w-4/5 md:w-6/7 lg:w-6/7 line-clamp-3 h-full flex items-center text-gray-400 text-xs md:text-lg lg:text-4xl lg:leading-14 md:leading-10 text-center">
                         <div class="h-max">
                             We provide Product Design, <span class="text-white font-medium">UI/UX Design</span>, <span class="text-white font-medium">Mobile App</span>,
                             Creative Director, and <span class="text-white font-medium"></span>Development services! Please share your ideas with us
@@ -51,34 +66,34 @@
                         </div>
                     </div>
                     <div class="h-full grid grid-cols-1 gap-5">
-                        <div class="w-12 h-12 border-2 border-gray-900 rounded-xl flex items-center justify-center">
+                        <div class="size-6 md:size-12 lg:size-12 border-2 border-gray-900 rounded-xl flex items-center justify-center">
                             <img src="./images/icons8-whatsapp-50.png" alt="" class="w-2/3 h-2/3 object-contain">
                         </div>
-                        <div class="w-12 h-12 border-2 border-gray-900 rounded-xl flex items-center justify-center">
+                        <div class="size-6 md:size-12 lg:size-12 border-2 border-gray-900 rounded-xl flex items-center justify-center">
                             <img src="./images/icons8-telegram-50.png" alt="" class="w-2/3 h-2/3 object-contain">
                         </div>
-                        <div class="w-12 h-12 border-2 border-gray-900 rounded-xl flex items-center justify-center">
+                        <div class="size-6 md:size-12 lg:size-12 border-2 border-gray-900 rounded-xl flex items-center justify-center">
                             <img src="./images/icons8-facebook-50 (1).png" alt="" class="w-2/3 h-2/3 object-contain">
                         </div>
                     </div>
                 </div>
                 <div class="flex gap-5 justify-center">
-                    <button class="text-2xl text-white bg-linear-to-b from-sky-700 rounded-xl to-teal-500 py-3 px-5">Get a meeting schedule</button>
-                    <button class="text-2xl text-white rounded-xl border-2 border-sky-600 py-3 px-5">Get a Free Consultation</button>
+                    <button class="w-max h-max text-xs lg:text-2xl md:text-2xl p-1 text-white bg-linear-to-b from-sky-700 rounded-xl to-teal-500 md:py-3 lg:py-3 md:px-5 lg:px-5">Get a meeting schedule</button>
+                    <button class="w-max h-max text-xs lg:text-2xl md:text-2xl p-1 text-white rounded-xl border-2 border-sky-600 md:py-3 lg:py-3 md:px-5 lg:px-5">Get a Free Consultation</button>
                 </div>
             </div>
         </div>
-        <div class="w-full py-6 border-t-1 border-gray-600">
-            <div class="w-9/10 mx-auto flex justify-between items-center">
-                <p class="font-sans text-xl text-zinc-500">© 2024 nexuxlab. All rights reserved.</p>
+        <div class="w-full py-3 md:py-6 lg:py-6 border-t-1 border-gray-600">
+            <div class="w-9/10 md:w-9/10 lg:w-9/10 mx-auto flex justify-between items-center">
+                <p class="font-sans text-[8px] md:text-2xl lg:text-2xl text-zinc-500">© 2024 nexuxlab. All rights reserved.</p>
                 <div class="flex gap-2 items-center">
-                    <div class="w-8 h-8 border-2 border-gray-900 rounded-xl flex items-center justify-center">
+                    <div class="size-4 md:w-8 lg:h-8 lg:w-8 md:h-8  border-2 border-gray-900 rounded-xl flex items-center justify-center">
                         <img src="./images/icons8-x-50.png" alt="" class="w-2/3 h-2/3 object-contain">
                     </div>
-                    <div class="w-8 h-8 border-2 border-gray-900 rounded-xl flex items-center justify-center">
+                    <div class="size-4 md:w-8 lg:h-8 lg:w-8 md:h-8 border-2 border-gray-900 rounded-xl flex items-center justify-center">
                         <img src="./images/icons8-instagram-50.png" alt="" class="w-2/3 h-2/3 object-contain">
                     </div>
-                    <div class="w-8 h-8 border-2 border-gray-900 rounded-xl flex items-center justify-center">
+                    <div class="size-4 md:w-8 lg:h-8 lg:w-8 md:h-8 border-2 border-gray-900 rounded-xl flex items-center justify-center">
                         <img src="./images/icons8-linkedin-24.png" alt="" class="w-2/3 h-2/3 object-contain">
                     </div>
                 </div>
@@ -114,7 +129,7 @@
             Published: August 10th 2024
         </p>
     </div>
-    <div class="py-8 bg-zinc-800 w-full">
+    <div class="py-8 bg-zinc-800 w-full relative">
         <div class="flex gap-2 w-9/10 mx-auto">
             <div class="w-14 h-14 bg-red-300 rounded-full bg-[url(./images/logo2.png)] bg-center bg-cover"></div>
             <div class="text-white">
@@ -122,137 +137,419 @@
                 <button class="px-4 text-sm rounded-full font-semibold bg-blue-500">Follow</button>
             </div>
         </div>
-        <div class="w-10/11 mx-auto flex gap-5 mt-12 overflow-x-auto">
-            <div class="w-md flex-none  h-80 bg-red-800 bg-[url(./images/corousel1.png)] rounded-md bg-top bg-cover">
-                <div class="w-full h-full flex justify-between items-end text-white backdrop-blur-xs p-4 opacity-0 hover:opacity-100 cursor-pointer transition duration-600">
-                    <div class="w-2/3 ">
-                        <h1 class="text-xl font-bold">AI Agent - Crypto Token generator website!</h1>
-                        <p>NexUX Lab</p>
-                    </div>
-                    <div class="w-1/3 flex items-end gap-10 ">
-                        <div class="flex gap-2 items-center ">
-                            <img src="./images/like (2).png" alt="" class="w-4 h-4">
-                            <span>245</span>
+        <img src="./images/icons8-right-arrow-90.png" alt="" class="hidden z-2 size-14 absolute rotate-180 left-0 top-1/2" id="l-arrow" onclick="carousel2()">
+        <img src="./images/icons8-right-arrow-90.png" alt="" class="size-14 z-2 absolute right-0 top-1/2" id="r-arrow" onclick="carousel1()">
+        <div class="w-10/11 mx-auto  mt-12 overflow-x-auto scroll-smooth" style="scrollbar-width: none;">
+            <div class="w-full flex gap-5 transition duration-500" id="carousel">
+                <div class="w-md flex-none  h-80 bg-red-800 bg-[url(./images/corousel1.png)] rounded-md bg-top bg-cover">
+                    <div class="w-full h-full flex justify-between items-end text-white  shadow-inner opacity-0 hover:opacity-100 cursor-pointer transition duration-600">
+                        <div class="w-2/3 ">
+                            <h1 class="text-xl font-bold">AI Agent - Crypto Token generator website!</h1>
+                            <p>NexUX Lab</p>
                         </div>
-                        <div class="flex gap-2 items-center">
-                            <img src="./images/eye.png" alt="" class="w-4 h-4">
-                            <span>1.8k</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="w-md flex-none h-80 bg-red-800 bg-[url(./images/c2.png)] rounded-md bg-top bg-cover">
-                <div class="w-full h-full flex justify-between items-end text-white backdrop-blur-xs p-4 opacity-0 hover:opacity-100 cursor-pointer transition duration-600">
-                    <div class="w-2/3 ">
-                        <h1 class="text-xl font-bold">AI Agent - Crypto Token generator website!</h1>
-                        <p>NexUX Lab</p>
-                    </div>
-                    <div class="w-1/3 flex items-end gap-10 ">
-                        <div class="flex gap-2 items-center ">
-                            <img src="./images/like (2).png" alt="" class="w-4 h-4">
-                            <span>245</span>
-                        </div>
-                        <div class="flex gap-2 items-center">
-                            <img src="./images/eye.png" alt="" class="w-4 h-4">
-                            <span>1.8k</span>
+                        <div class="w-1/3 flex items-end gap-10 ">
+                            <div class="flex gap-2 items-center ">
+                                <img src="./images/like (2).png" alt="" class="w-4 h-4">
+                                <span>245</span>
+                            </div>
+                            <div class="flex gap-2 items-center">
+                                <img src="./images/eye.png" alt="" class="w-4 h-4">
+                                <span>1.8k</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="w-md flex-none h-80 bg-red-800 bg-[url(./images/c3.jpg)] rounded-md bg-top bg-cover">
-                <div class="w-full h-full flex justify-between items-end text-white backdrop-blur-xs p-4 opacity-0 hover:opacity-100 cursor-pointer transition duration-600">
-                    <div class="w-2/3 ">
-                        <h1 class="text-xl font-bold">AI Agent - Crypto Token generator website!</h1>
-                        <p>NexUX Lab</p>
-                    </div>
-                    <div class="w-1/3 flex items-end gap-10 ">
-                        <div class="flex gap-2 items-center ">
-                            <img src="./images/like (2).png" alt="" class="w-4 h-4">
-                            <span>245</span>
+                <div class="w-md flex-none h-80 bg-red-800 bg-[url(./images/c2.png)] rounded-md bg-top bg-cover">
+                    <div class="w-full h-full flex justify-between items-end text-white shadow-inner opacity-0 hover:opacity-100 cursor-pointer transition duration-600">
+                        <div class="w-2/3 ">
+                            <h1 class="text-xl font-bold">AI Agent - Crypto Token generator website!</h1>
+                            <p>NexUX Lab</p>
                         </div>
-                        <div class="flex gap-2 items-center">
-                            <img src="./images/eye.png" alt="" class="w-4 h-4">
-                            <span>1.8k</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="w-md flex-none h-80 bg-red-800 bg-[url(./images/c4.jpg)] rounded-md bg-top bg-cover">
-                <div class="w-full h-full flex justify-between items-end text-white backdrop-blur-xs p-4 opacity-0 hover:opacity-100 cursor-pointer transition duration-600">
-                    <div class="w-2/3 ">
-                        <h1 class="text-xl font-bold">AI Agent - Crypto Token generator website!</h1>
-                        <p>NexUX Lab</p>
-                    </div>
-                    <div class="w-1/3 flex items-end gap-10 ">
-                        <div class="flex gap-2 items-center ">
-                            <img src="./images/like (2).png" alt="" class="w-4 h-4">
-                            <span>245</span>
-                        </div>
-                        <div class="flex gap-2 items-center">
-                            <img src="./images/eye.png" alt="" class="w-4 h-4">
-                            <span>1.8k</span>
+                        <div class="w-1/3 flex items-end gap-10 ">
+                            <div class="flex gap-2 items-center ">
+                                <img src="./images/like (2).png" alt="" class="w-4 h-4">
+                                <span>245</span>
+                            </div>
+                            <div class="flex gap-2 items-center">
+                                <img src="./images/eye.png" alt="" class="w-4 h-4">
+                                <span>1.8k</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="w-md flex-none h-80 bg-red-800 bg-[url(./images/c5.jpg)] rounded-md bg-top bg-cover">
-                <div class="w-full h-full flex justify-between items-end text-white backdrop-blur-xs p-4 opacity-0 hover:opacity-100 cursor-pointer transition duration-600">
-                    <div class="w-2/3 ">
-                        <h1 class="text-xl font-bold">AI Agent - Crypto Token generator website!</h1>
-                        <p>NexUX Lab</p>
+                <div class="w-md flex-none h-80 bg-red-800 bg-[url(./images/c3.jpg)] rounded-md bg-top bg-cover">
+                    <div class="w-full h-full flex justify-between items-end text-white shadow-inner  opacity-0 hover:opacity-100 cursor-pointer transition duration-600">
+                            <div class="w-2/3 ">
+                                <h1 class="text-xl font-bold">AI Agent - Crypto Token generator website!</h1>
+                                <p>NexUX Lab</p>
+                            </div>
+                            <div class="w-1/3 flex items-end gap-10 ">
+                                <div class="flex gap-2 items-center ">
+                                    <img src="./images/like (2).png" alt="" class="w-4 h-4">
+                                    <span>245</span>
+                                </div>
+                                <div class="flex gap-2 items-center">
+                                    <img src="./images/eye.png" alt="" class="w-4 h-4">
+                                    <span>1.8k</span>
+                                </div>
+                            </div>
                     </div>
-                    <div class="w-1/3 flex items-end gap-10 ">
-                        <div class="flex gap-2 items-center ">
-                            <img src="./images/like (2).png" alt="" class="w-4 h-4">
-                            <span>245</span>
+                </div>
+                <div class="w-md flex-none h-80 bg-red-800 bg-[url(./images/c4.jpg)] rounded-md bg-top bg-cover">
+                    <div class="w-full h-full flex justify-between items-end text-white shadow-inner opacity-0 hover:opacity-100 cursor-pointer transition duration-600">
+                        <div class="w-2/3 ">
+                            <h1 class="text-xl font-bold">AI Agent - Crypto Token generator website!</h1>
+                            <p>NexUX Lab</p>
                         </div>
-                        <div class="flex gap-2 items-center">
-                            <img src="./images/eye.png" alt="" class="w-4 h-4">
-                            <span>1.8k</span>
+                        <div class="w-1/3 flex items-end gap-10 ">
+                            <div class="flex gap-2 items-center ">
+                                <img src="./images/like (2).png" alt="" class="w-4 h-4">
+                                <span>245</span>
+                            </div>
+                            <div class="flex gap-2 items-center">
+                                <img src="./images/eye.png" alt="" class="w-4 h-4">
+                                <span>1.8k</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-md flex-none h-80 bg-red-800 bg-[url(./images/c5.jpg)] rounded-md bg-top bg-cover">
+                    <div class="w-full h-full flex justify-between items-end text-white  shadow-inner opacity-0 hover:opacity-100 cursor-pointer transition duration-600">
+                        <div class="w-2/3 ">
+                            <h1 class="text-xl font-bold">AI Agent - Crypto Token generator website!</h1>
+                            <p>NexUX Lab</p>
+                        </div>
+                        <div class="w-1/3 flex items-end gap-10 ">
+                            <div class="flex gap-2 items-center ">
+                                <img src="./images/like (2).png" alt="" class="w-4 h-4">
+                                <span>245</span>
+                            </div>
+                            <div class="flex gap-2 items-center">
+                                <img src="./images/eye.png" alt="" class="w-4 h-4">
+                                <span>1.8k</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="w-full flex items-center p-8 justify-center bg-teal-50">
-        <div class="w-8/10  grid grid-cols-3 gap-5 grid-rows-5">
-            <div class="row-span-5 col-span-2 ">
-                dfsd
-            </div>
-            <div class="flex flex-col gap-3 bg-white border border-zinc-200 rounded p-8">
-                <p class="text-xs text-gray-600 font-bold">OWNER</p>
-                <div class="flex gap-1">
-                    <img src="./images/logo2.png" alt="" class="size-12 rounded-full">
-                    <div >
-                        <h3 class="text-lg font-semibold">NexUX Lab</h3>
-                        <p class="text-xs">San Fransisco, CA, USA</p>
+    <div class="w-full flex items-center p-4 sm:p-4 md:p-6 lg:p-12  justify-center bg-zinc-50 ">
+        <div class="w-full sm:w-full md:w-full lg:w-8/10 flex flex-col sm:flex-col md:flex-row lg:flex-row justify-between gap-5">
+            <div class="w-full sm:w-full md:w-6/10 lg:w-7/10 bg-white border border-zinc-200 rounded">
+                <div class="p-8 flex flex-col gap-3 border-b-1 border-zinc-200">
+                    <h1 class="text-black text-3xl font-extrabold ">Sign up to join the conversation</h1>
+                    <p class="text-black">Add your feedback for NexUX Lab's project by signing in or signing up.</p>
+                    <div class="flex gap-3 items-center">
+                        <button class="h-max py-2 px-5 font-semibold text-sm bg-blue-600 text-white rounded-full hover:bg-blue-800 transition duration-300 cursor-pointer">Sign Up With Email</button>
+                        <p class="text-zinc-500 text-sm font-bold cursor-pointer">or</p>
+                        <div class="flex gap-2"> 
+                            <img src="./images/icons8-apple-24.png" alt="" class="size-9 object-contain border p-1 rounded-full border-zinc-300 transition duration-300 hover:bg-zinc-300 cursor-pointer">
+                            <img src="./images/icons8-facebook-logo-48.png" alt="" class="size-9 object-cover cursor-pointer">
+                            <img src="./images/icons8-google-48.png" alt="" class="size-9 object-contain border p-1 rounded-full border-zinc-300 transition duration-300 hover:bg-zinc-300 cursor-pointer">
+                        </div>
                     </div>
                 </div>
-                <button class="py-2  bg-blue-700 text-white rounded-full">Follow</button>
-                <button class="py-2  bg-blue-50 text-blue-700 rounded-full"> Hire</button>
-            </div>
-            <div class="flex flex-col gap-3 h-3/4 bg-white border border-zinc-200 rounded p-8">
-                    <h1 class="text-2xl text-black font-bold">Website Design</h1>
-                    <div class="text-zinc-600 font-semibold flex gap-3">
-                        <div class="flex gap-1 items-center">
-                            <img src="./images/icons8-like.png" alt="" class="size-5">
-                            <span>210</span>
-                        </div>
-                        <div class="flex gap-1 items-center">
-                            <img src="./images/icons8-eye-24.png" alt="" class="size-5">
-                            <span>1.1k</span>
-                        </div>
-                        <div class="flex gap-1 items-center">
-                            <img src="./images/icons8-comment-30.png" alt="" class="size-5">
-                            <span>20</span>  
+                <div class="w-full flex flex-col gap-12 p-8 items-center">
+                    <div class="w-11/12 flex gap-5 ">
+                        <img src="./images/9369468.jpg" alt="" class="rounded-full size-14">
+                        <div class="flex flex-col justify-around">
+                            <div class="flex items-center gap-2">
+                                <h3 class="text-sm font-bold text-zinc-600">Isabella Sutil</h3>
+                                <p class="text-xs  text-zinc-400">Mar 14, 2025</p>
+                            </div>
+                            <p class="font-normal text-zinc-700">great work!</p>
                         </div>
                     </div>
-                    <p class="text-zinc-500 text-xs font-semibold">
-                        Published: August 10th 2024
-                    </p>
+                    <div class="w-11/12 flex gap-5 ">
+                        <img src="./images/9369468.jpg" alt="" class="rounded-full size-14">
+                        <div class="flex flex-col justify-around">
+                            <div class="flex items-center gap-2">
+                                <h3 class="text-sm font-bold text-zinc-600">Isabella Sutil</h3>
+                                <p class="text-xs  text-zinc-400">Mar 14, 2025</p>
+                            </div>
+                            <p class="font-normal text-zinc-700">great work!</p>
+                        </div>
+                    </div>
+                    <div class="w-11/12 flex gap-5 ">
+                        <img src="./images/9369468.jpg" alt="" class="rounded-full size-14">
+                        <div class="flex flex-col justify-around">
+                            <div class="flex items-center gap-2">
+                                <h3 class="text-sm font-bold text-zinc-600">Isabella Sutil</h3>
+                                <p class="text-xs  text-zinc-400">Mar 14, 2025</p>
+                            </div>
+                            <p class="font-normal text-zinc-700">great work!</p>
+                        </div>
+                    </div>
+                    <div class="w-11/12 flex gap-5 ">
+                        <img src="./images/9369468.jpg" alt="" class="rounded-full size-14">
+                        <div class="flex flex-col justify-around">
+                            <div class="flex items-center gap-2">
+                                <h3 class="text-sm font-bold text-zinc-600">Isabella Sutil</h3>
+                                <p class="text-xs  text-zinc-400">Mar 14, 2025</p>
+                            </div>
+                            <p class="font-normal text-zinc-700">great work!</p>
+                        </div>
+                    </div>
+                    <div class="w-11/12 flex gap-5 ">
+                        <img src="./images/9369468.jpg" alt="" class="rounded-full size-14">
+                        <div class="flex flex-col justify-around">
+                            <div class="flex items-center gap-2">
+                                <h3 class="text-sm font-bold text-zinc-600">Isabella Sutil</h3>
+                                <p class="text-xs  text-zinc-400">Mar 14, 2025</p>
+                            </div>
+                            <p class="font-normal text-zinc-700">great work!</p>
+                        </div>
+                    </div>
+                    <div class="w-11/12 flex gap-5 ">
+                        <img src="./images/9369468.jpg" alt="" class="rounded-full size-14">
+                        <div class="flex flex-col justify-around">
+                            <div class="flex items-center gap-2">
+                                <h3 class="text-sm font-bold text-zinc-600">Isabella Sutil</h3>
+                                <p class="text-xs  text-zinc-400">Mar 14, 2025</p>
+                            </div>
+                            <p class="font-normal text-zinc-700">great work!</p>
+                        </div>
+                    </div>
+                    <div class="w-11/12 flex gap-5 ">
+                        <img src="./images/9369468.jpg" alt="" class="rounded-full size-14">
+                        <div class="flex flex-col justify-around">
+                            <div class="flex items-center gap-2">
+                                <h3 class="text-sm font-bold text-zinc-600">Isabella Sutil</h3>
+                                <p class="text-xs  text-zinc-400">Mar 14, 2025</p>
+                            </div>
+                            <p class="font-normal text-zinc-700">great work!</p>
+                        </div>
+                    </div>
+                    <div class="w-11/12 flex gap-5 ">
+                        <img src="./images/9369468.jpg" alt="" class="rounded-full size-14">
+                        <div class="flex flex-col justify-around">
+                            <div class="flex items-center gap-2">
+                                <h3 class="text-sm font-bold text-zinc-600">Isabella Sutil</h3>
+                                <p class="text-xs  text-zinc-400">Mar 14, 2025</p>
+                            </div>
+                            <p class="font-normal text-zinc-700">great work!</p>
+                        </div>
+                    </div>
+                    <div class="w-11/12 flex gap-5 ">
+                        <img src="./images/9369468.jpg" alt="" class="rounded-full size-14">
+                        <div class="flex flex-col justify-around">
+                            <div class="flex items-center gap-2">
+                                <h3 class="text-sm font-bold text-zinc-600">Isabella Sutil</h3>
+                                <p class="text-xs  text-zinc-400">Mar 14, 2025</p>
+                            </div>
+                            <p class="font-normal text-zinc-700">great work!</p>
+                        </div>
+                    </div>
+                    <div class="w-11/12 flex gap-5 ">
+                        <img src="./images/9369468.jpg" alt="" class="rounded-full size-14">
+                        <div class="flex flex-col justify-around">
+                            <div class="flex items-center gap-2">
+                                <h3 class="text-sm font-bold text-zinc-600">Isabella Sutil</h3>
+                                <p class="text-xs  text-zinc-400">Mar 14, 2025</p>
+                            </div>
+                            <p class="font-normal text-zinc-700">great work!</p>
+                        </div>
+                    </div>
+                    <div class="w-11/12  flex-col gap-12 hidden" id="comment-section">
+                        <div class="w-full flex gap-5 ">
+                            <img src="./images/9369468.jpg" alt="" class="rounded-full size-14">
+                            <div class="flex flex-col justify-around">
+                                <div class="flex items-center gap-2">
+                                    <h3 class="text-sm font-bold text-zinc-600">Isabella Sutil</h3>
+                                    <p class="text-xs  text-zinc-400">Mar 14, 2025</p>
+                                </div>
+                                <p class="font-normal text-zinc-700">great work!</p>
+                            </div>
+                        </div>
+                        <div class="w-full flex gap-5 ">
+                            <img src="./images/9369468.jpg" alt="" class="rounded-full size-14">
+                            <div class="flex flex-col justify-around">
+                                <div class="flex items-center gap-2">
+                                    <h3 class="text-sm font-bold text-zinc-600">Isabella Sutil</h3>
+                                    <p class="text-xs  text-zinc-400">Mar 14, 2025</p>
+                                </div>
+                                <p class="font-normal text-zinc-700">great work!</p>
+                            </div>
+                        </div>
+                        <div class="w-full flex gap-5 ">
+                            <img src="./images/9369468.jpg" alt="" class="rounded-full size-14">
+                            <div class="flex flex-col justify-around">
+                                <div class="flex items-center gap-2">
+                                    <h3 class="text-sm font-bold text-zinc-600">Isabella Sutil</h3>
+                                    <p class="text-xs  text-zinc-400">Mar 14, 2025</p>
+                                </div>
+                                <p class="font-normal text-zinc-700">great work!</p>
+                            </div>
+                        </div>
+                        <div class="w-full flex gap-5 ">
+                            <img src="./images/9369468.jpg" alt="" class="rounded-full size-14">
+                            <div class="flex flex-col justify-around">
+                                <div class="flex items-center gap-2">
+                                    <h3 class="text-sm font-bold text-zinc-600">Isabella Sutil</h3>
+                                    <p class="text-xs  text-zinc-400">Mar 14, 2025</p>
+                                </div>
+                                <p class="font-normal text-zinc-700">great work!</p>
+                            </div>
+                        </div>
+                        <div class="w-full flex gap-5 ">
+                            <img src="./images/9369468.jpg" alt="" class="rounded-full size-14">
+                            <div class="flex flex-col justify-around">
+                                <div class="flex items-center gap-2">
+                                    <h3 class="text-sm font-bold text-zinc-600">Isabella Sutil</h3>
+                                    <p class="text-xs  text-zinc-400">Mar 14, 2025</p>
+                                </div>
+                                <p class="font-normal text-zinc-700">great work!</p>
+                            </div>
+                        </div>
+                        <div class="w-full flex gap-5 ">
+                            <img src="./images/9369468.jpg" alt="" class="rounded-full size-14">
+                            <div class="flex flex-col justify-around">
+                                <div class="flex items-center gap-2">
+                                    <h3 class="text-sm font-bold text-zinc-600">Isabella Sutil</h3>
+                                    <p class="text-xs  text-zinc-400">Mar 14, 2025</p>
+                                </div>
+                                <p class="font-normal text-zinc-700">great work!</p>
+                            </div>
+                        </div>
+                        <div class="w-full flex gap-5 ">
+                            <img src="./images/9369468.jpg" alt="" class="rounded-full size-14">
+                            <div class="flex flex-col justify-around">
+                                <div class="flex items-center gap-2">
+                                    <h3 class="text-sm font-bold text-zinc-600">Isabella Sutil</h3>
+                                    <p class="text-xs  text-zinc-400">Mar 14, 2025</p>
+                                </div>
+                                <p class="font-normal text-zinc-700">great work!</p>
+                            </div>
+                        </div>
+                        <div class="w-full flex gap-5 ">
+                            <img src="./images/9369468.jpg" alt="" class="rounded-full size-14">
+                            <div class="flex flex-col justify-around">
+                                <div class="flex items-center gap-2">
+                                    <h3 class="text-sm font-bold text-zinc-600">Isabella Sutil</h3>
+                                    <p class="text-xs  text-zinc-400">Mar 14, 2025</p>
+                                </div>
+                                <p class="font-normal text-zinc-700">great work!</p>
+                            </div>
+                        </div>
+                        <div class="w-full flex gap-5 ">
+                            <img src="./images/9369468.jpg" alt="" class="rounded-full size-14">
+                            <div class="flex flex-col justify-around">
+                                <div class="flex items-center gap-2">
+                                    <h3 class="text-sm font-bold text-zinc-600">Isabella Sutil</h3>
+                                    <p class="text-xs  text-zinc-400">Mar 14, 2025</p>
+                                </div>
+                                <p class="font-normal text-zinc-700">great work!</p>
+                            </div>
+                        </div>
+                        <div class="w-full flex gap-5 ">
+                            <img src="./images/9369468.jpg" alt="" class="rounded-full size-14">
+                            <div class="flex flex-col justify-around">
+                                <div class="flex items-center gap-2">
+                                    <h3 class="text-sm font-bold text-zinc-600">Isabella Sutil</h3>
+                                    <p class="text-xs  text-zinc-400">Mar 14, 2025</p>
+                                </div>
+                                <p class="font-normal text-zinc-700">great work!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full flex items-center justify-center p-6 hover:bg-zinc-200 cursor-pointer" id="comments" onclick="dispalyrest()">
+                    <p class="text-lg text-blue-700">See More Comments ↓ </p>
+                </div>
+            </div>
+            <div class="w-full sm:w-full md:w-4/10  lg:w-3/10 flex flex-col gap-5">
+                <div class="flex flex-col gap-3 bg-white border border-zinc-200 rounded p-8">
+                    <p class="text-xs text-gray-600 font-bold">OWNER</p>
+                    <div class="flex gap-1">
+                        <img src="./images/logo2.png" alt="" class="size-12 rounded-full">
+                        <div >
+                            <h3 class="text-lg font-semibold">NexUX Lab</h3>
+                            <p class="text-xs">San Fransisco, CA, USA</p>
+                        </div>
+                    </div>
+                    <button class="py-2  bg-blue-600 text-white rounded-full font-semibold">Follow</button>
+                    <button class="py-2  bg-blue-50 text-blue-600 rounded-full font-semibold"> Hire</button>
+                </div>
+                <div class="flex flex-col gap-3  bg-white border border-zinc-200 rounded p-8">
+                        <h1 class="text-2xl text-black font-bold">Website Design</h1>
+                        <div class="text-zinc-600 font-semibold flex gap-3">
+                            <div class="flex gap-1 items-center">
+                                <img src="./images/icons8-like.png" alt="" class="size-5">
+                                <span>210</span>
+                            </div>
+                            <div class="flex gap-1 items-center">
+                                <img src="./images/icons8-eye-24.png" alt="" class="size-5">
+                                <span>1.1k</span>
+                            </div>
+                            <div class="flex gap-1 items-center">
+                                <img src="./images/icons8-comment-30.png" alt="" class="size-5">
+                                <span>20</span>  
+                            </div>
+                        </div>
+                        <p class="text-zinc-500 text-xs font-semibold">
+                            Published: August 10th 2024
+                        </p>
+                </div>
+                <div class="flex flex-col  gap-3 bg-white border border-zinc-200 rounded p-8">
+                    <h4 class="text-xs text-gray-500 font-bold">TOOLS</h4>
+                    <h2 class="text-base text-black font-bold mb-5">Figma</h2>
+                    <div class="w-full flex flex-col gap-4">
+                        <h4 class="text-xs text-gray-500 font-bold uppercase">Creative Fields</h4>
+                        <div class="text-sm text-white font-bold w-full h-max p-2  bg-[url(./images/back1.png)] bg-cover bg-bottom rounded flex items-center justify-center">
+                            Product Design
+                        </div>
+                        <div class="text-sm text-white font-bold w-full h-max p-2  bg-[url(./images/back2.jpg)] bg-cover bg-bottom rounded flex items-center justify-center">
+                            Web Design
+                        </div>
+                        <div class="text-sm text-white font-bold w-full h-max p-2  bg-[url(./images/back3.jpg)] bg-cover bg-bottom rounded flex items-center justify-center">
+                            UI/UX
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-wrap gap-3  bg-white border border-zinc-200 rounded p-8">
+                    <div class="w-1/3 text-center text-black py-2 text-sm font-semibold border border-zinc-200 rounded-full hover:bg-zinc-200 transition duration-200 ">
+                        Website
+                    </div>
+                    <div class="w-6/10 text-center text-black py-2 text-sm font-semibold border border-zinc-200 rounded-full hover:bg-zinc-200 transition duration-200 ">
+                        Website Design
+                    </div>
+                    <div class="w-3/5 text-black text-center py-2 text-sm font-semibold border border-zinc-200 rounded-full hover:bg-zinc-200 transition duration-200 ">
+                        Website Development
+                    </div>
+                    <div class="w-2/7 text-black text-center py-2 text-sm font-semibold border border-zinc-200 rounded-full hover:bg-zinc-200 transition duration-200 ">
+                        websites    
+                    </div>
+                    <div class="w-3/7 text-black text-center py-2 text-sm font-semibold border border-zinc-200 rounded-full hover:bg-zinc-200 transition duration-200 ">
+                        ui design
+                    </div>
+                    <div class="w-3/7 text-black text-center py-2 text-sm font-semibold border border-zinc-200 rounded-full hover:bg-zinc-200 transition duration-200 ">
+                        nexux lab
+                    </div>
+                </div>
+                <div class="flex justify-between ">
+                    <p class="text-xs text-zinc-500">© All rights reserved.</p>
+                    <p class="flex items-center gap-1 text-xs text-zinc-500"><img src="./images/icons8-warning-50.png" alt="" class="size-3"> Report</p>
+                </div>
             </div>
         </div>
     </div>
+
+    <script>
+        function dispalyrest(){
+            document.getElementById("comment-section").style.display="flex";
+            document.getElementById("comments").style.display="none";
+        }
+        function carousel1(){
+            document.getElementById("carousel").style.transform="translateX(-68%)";
+            document.getElementById("r-arrow").style.display='none';
+            document.getElementById("l-arrow").style.display='inline';
+        }
+        function carousel2(){
+            document.getElementById("carousel").style.transform="translateX(0%)";
+            document.getElementById("l-arrow").style.display='none';
+            document.getElementById("r-arrow").style.display='inline';
+        }
+    </script>
 </body>
 </html>
