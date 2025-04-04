@@ -542,21 +542,13 @@
             document.getElementById("comment-section").style.display="flex";
             document.getElementById("comments").style.display="none";
         }
-        function carousel1(direction){
-            currentIndex += direction;
-            currentIndex = 0;
-            if (currentIndex < 0) {
-                currentIndex = totalItems - 1; // Go to the last item
-              } else if (currentIndex >= totalItems) {
-                currentIndex = 0; // Go to the first item
-              }
-           // document.getElementById("carousel").style.transform=`translateX(-${currentIndex * 100}%)`;
-            //document.getElementById("r-arrow").style.display='none';
-            //document.getElementById("l-arrow").style.display='inline';
+        function carousel1(){
+            document.getElementById("carousel").style.transform=`translateX(-68%)`;
+            document.getElementById("r-arrow").style.display='none';
+            document.getElementById("l-arrow").style.display='inline';
         }
         function carousel2(){
-            currentIndex = totalItems - 1;
-            document.getElementById("carousel").style.transform=`translateX(-${currentIndex * 100}%)`;
+            document.getElementById("carousel").style.transform=`translateX(0%)`;
             document.getElementById("l-arrow").style.display='none';
             document.getElementById("r-arrow").style.display='inline';
         }
