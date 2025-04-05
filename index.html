@@ -137,11 +137,16 @@
                 <button class="px-4 text-sm rounded-full font-semibold bg-blue-500">Follow</button>
             </div>
         </div>
-        <img src="./images/icons8-right-arrow-90.png" alt="" class="hidden z-2 size-14 absolute rotate-180 left-0 top-1/2" id="l-arrow" onclick="carousel2()">
-        <img src="./images/icons8-right-arrow-90.png" alt="" class="size-14 z-2 absolute right-0 top-1/2" id="r-arrow" onclick="carousel1()">
+        <!--Big screens-->
+        <img src="./images/icons8-right-arrow-90.png" alt="" class="hidden cursor-pointer z-2 size-14 absolute rotate-180 left-0 top-1/2" id="l-arrow" onclick="carousel2()">
+        <img src="./images/icons8-right-arrow-90.png" alt="" class="size-14 cursor-pointer z-2 absolute right-0 top-1/2 hidden sm:hidden md:inline lg:inline" id="r-arrow" onclick="carousel1()">
+        <!--Small screens-->
+        <img src="./images/icons8-right-arrow-90.png" alt="" class="hidden cursor-pointer z-2 size-8 absolute rotate-180 left-0 top-1/2 " id="sl-arrow" onclick="carousel(-1)">
+        <img src="./images/icons8-right-arrow-90.png" alt="" class="size-8 cursor-pointer z-2 absolute right-0 top-1/2 sm:inline md:hidden lg:hidden" id="sr-arrow" onclick="carousel(1)">
+        
         <div class="w-10/11 mx-auto  mt-12 overflow-x-auto scroll-smooth" style="scrollbar-width: none;">
-            <div class="w-full flex gap-5 transition duration-500" id="carousel">
-                <div class="carousel-item w-md flex-none  h-80 bg-red-800 bg-[url(./images/corousel1.png)] rounded-md bg-top bg-cover">
+            <div class="w-full flex gap-0 sm:gap-0  md:gap-5 lg:gap-5 transition duration-500" id="carousel">
+                <div class="carousel-item w-full sm:w-full md:w-md lg:w-md flex-none  h-80 bg-red-800 bg-[url(./images/corousel1.png)] rounded-md bg-top bg-cover">
                     <div class="w-full h-full p-2 flex justify-between items-end text-white  shadow-inner opacity-0 hover:opacity-100 cursor-pointer transition duration-600">
                         <div class="w-2/3 ">
                             <h1 class="text-xl font-bold">AI Agent - Crypto Token generator website!</h1>
@@ -159,7 +164,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item w-md flex-none h-80 bg-red-800 bg-[url(./images/c2.png)] rounded-md bg-top bg-cover">
+                <div class="carousel-item w-full sm:w-full md:w-md lg:w-md flex-none h-80 bg-red-800 bg-[url(./images/c2.png)] rounded-md bg-top bg-cover">
                     <div class="w-full h-full p-2 flex justify-between items-end text-white shadow-inner opacity-0 hover:opacity-100 cursor-pointer transition duration-600">
                         <div class="w-2/3 ">
                             <h1 class="text-xl font-bold">AI Agent - Crypto Token generator website!</h1>
@@ -177,7 +182,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item w-md flex-none h-80 bg-red-800 bg-[url(./images/c3.jpg)] rounded-md bg-top bg-cover">
+                <div class="carousel-item w-full sm:w-full md:w-md lg:w-md flex-none h-80 bg-red-800 bg-[url(./images/c3.jpg)] rounded-md bg-top bg-cover">
                     <div class="w-full h-full p-2 flex justify-between items-end text-white shadow-inner  opacity-0 hover:opacity-100 cursor-pointer transition duration-600">
                             <div class="w-2/3 ">
                                 <h1 class="text-xl font-bold">AI Agent - Crypto Token generator website!</h1>
@@ -195,7 +200,7 @@
                             </div>
                     </div>
                 </div>
-                <div class="carousel-item w-md flex-none h-80 bg-red-800 bg-[url(./images/c4.jpg)] rounded-md bg-top bg-cover">
+                <div class="carousel-item w-full sm:w-full md:w-md lg:w-md flex-none h-80 bg-red-800 bg-[url(./images/c4.jpg)] rounded-md bg-top bg-cover">
                     <div class="w-full h-full p-2 flex justify-between items-end text-white shadow-inner opacity-0 hover:opacity-100 cursor-pointer transition duration-600">
                         <div class="w-2/3 ">
                             <h1 class="text-xl font-bold">AI Agent - Crypto Token generator website!</h1>
@@ -213,7 +218,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item w-md flex-none h-80 bg-red-800 bg-[url(./images/c5.jpg)] rounded-md bg-top bg-cover">
+                <div class="carousel-item w-full sm:w-full md:w-md lg:w-md flex-none h-80 bg-red-800 bg-[url(./images/c5.jpg)] rounded-md bg-top bg-cover">
                     <div class="w-full h-full p-2 flex justify-between items-end text-white  shadow-inner opacity-0 hover:opacity-100 cursor-pointer transition duration-600">
                         <div class="w-2/3 ">
                             <h1 class="text-xl font-bold">AI Agent - Crypto Token generator website!</h1>
@@ -538,6 +543,7 @@
     <script>
         let currentIndex = 0;
         const items = document.querySelectorAll(".carousel-item");
+        const totalItems=items.length;
         function dispalyrest(){
             document.getElementById("comment-section").style.display="flex";
             document.getElementById("comments").style.display="none";
@@ -551,6 +557,20 @@
             document.getElementById("carousel").style.transform=`translateX(0%)`;
             document.getElementById("l-arrow").style.display='none';
             document.getElementById("r-arrow").style.display='inline';
+        }
+        function carousel(direction){
+            currentIndex+=direction;
+            if(currentIndex<=0){
+                document.getElementById("carousel").style.transform=`translateX(0%)`;
+                document.getElementById("sl-arrow").style.display='none';
+                document.getElementById("sr-arrow").style.display='inline';
+            }else if(currentIndex>=totalItems){
+                document.getElementById("sr-arrow").style.display='none';
+            }else if(currentIndex<totalItems){
+                document.getElementById("carousel").style.transform=`translateX(-${currentIndex*100}%)`;
+                document.getElementById("sl-arrow").style.display='inline';
+                document.getElementById("sr-arrow").style.display='inline';
+            }
         }
     </script>
 </body>
